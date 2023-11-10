@@ -11,7 +11,7 @@ export default function handler(req, res) {
         console.log(receiver ,name, IFSC_Code)
         // Check if sender and receiver exist in user accounts
         if (!userAccounts[receiver]) {
-          return res.status(400).json({ error: 'Invalid sender or receiver' });
+          return res.status(400).json({ error: 'Invalid receiver' });
         }
 
         // Check if sender has sufficient balance
