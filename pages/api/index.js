@@ -16,7 +16,7 @@ export default function handler(req, res) {
         // Perform penny drop transaction
         userAccounts[receiver] += amount;
 
-        res.json({ account:receiver, message: 'Penny drop successful' });
+        res.status(200).json({ account:receiver, message: 'Penny drop successful' });
     } else {
         res.status(200).json({ name: 'Penny Drop API' })
     }
